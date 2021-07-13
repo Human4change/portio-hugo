@@ -18,7 +18,7 @@
           <div class="carousel-inner">
             {{ range $elem_index, $elem_val := .imageCarousel }}
             <div class="carousel-item{{ if eq $elem_index 0  }} active{{end}}">
-              <img class="rounded-lg d-block w-100" src="{{ $elem_val  | absURL }}" alt="{{ $elem_val }}" style='-webkit-mask: url({{"images/hero/hero-mask-svg.svg" | absURL}}); -webkit-mask-size: contain;'>
+              <img class="rounded-lg d-block w-100" src="{{ $elem_val  | relURL }}" alt="{{ $elem_val }}" style='-webkit-mask: url({{ "images/hero/hero-mask-svg.svg" | relURL }}); -webkit-mask-size: contain;'>
             </div>
             {{ end }}
           </div>
